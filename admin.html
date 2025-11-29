@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Book Management - Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Admin — Book Management Page</h1>
+    <nav>
+      <a class="btn" href="index.html">Go to Home Page</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Add Book</h2>
+      <form id="addBookForm">
+        <div class="field">
+          <label for="title">Title</label>
+          <input id="title" name="title" required />
+        </div>
+        <div class="field">
+          <label for="author">Author</label>
+          <input id="author" name="author" required />
+        </div>
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="">--Select--</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Technical">Technical</option>
+          </select>
+        </div>
+
+        <!-- Spec says: use same image for all books. We allow optionally overriding -->
+        <div class="field">
+          <label for="imageUrl">Image URL (optional)</label>
+          <input id="imageUrl" name="imageUrl" placeholder="leave empty to use default" />
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Add Book</button>
+          <button class="btn btn-ghost" type="button" id="clearStorage">Clear All Books</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="preview">
+      <h2>Preview (current books)</h2>
+      <div id="adminGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Book Management - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Mini Book Management App</h1>
+    <nav>
+      <a class="btn" href="admin.html">Go to Admin Page</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="control-row">
+        <label for="filterCategory">Filter by Category:</label>
+        <select id="filterCategory">
+          <option value="All">All</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Technical">Technical</option>
+        </select>
+
+        <label for="sortSelect">Sort:</label>
+        <select id="sortSelect">
+          <option value="none">None</option>
+          <option value="asc">Title A → Z</option>
+          <option value="desc">Title Z → A</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="booksGrid" class="grid">
+      <!-- cards injected here -->
+    </section>
+
+    <footer style="margin-top:24px;">
+      <small>Use "Go to Admin Page" to add books.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
